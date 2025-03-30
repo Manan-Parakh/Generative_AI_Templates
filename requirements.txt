@@ -3,3 +3,4 @@ dotenv
 langchain-core
 langchain-community
 ipykernel
+streamlit
