@@ -11,9 +11,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 ## Langsmith Tracking
-os.environ["LANGCHAIN_API_KEY"]="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"
+os.environ["LANGSMITH_API_KEY"] = os.getenv("LANGSMITH_API_KEY")
 os.environ["LANGCHAIN_TRACING_V2"]="true"
-os.environ["LANGCHAIN_PROJECT"]="Simple Q&A Chatbot With OPENAI"
+os.environ["LANGSMITH_PROJECT"]=os.getenv("LANGSMITH_PROJECT")
 
 ## Prompt Template
 prompt=ChatPromptTemplate.from_messages(
