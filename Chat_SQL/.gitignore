@@ -14,7 +14,6 @@ venv/
 # Ignore database and chroma storage
 chroma_db/
 chat_histories/
-*.db
 *.sqlite
 *.parquet
 
