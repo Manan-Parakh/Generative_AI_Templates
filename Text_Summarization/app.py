@@ -2,12 +2,12 @@ import validators, streamlit as st
 from langchain.prompts import PromptTemplate
 from langchain_groq import ChatGroq
 from langchain.chains.summarize import load_summarize_chain
-from langchain_community.document_loaders import YoutubeLoader, UnstructuredURLLoader
+from langchain_community.document_loaders import UnstructuredURLLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 # Strealit Setup
-st.set_page_config(page_title="LangChain: Summarize Text From YT or Website", page_icon="🦜")
-st.title("🦜 LangChain: Summarize Text From YT or Website")
+st.set_page_config(page_title="LangChain: Summarize Text From a Website", page_icon="🦜")
+st.title("🦜 LangChain: Summarize Text From a Website")
 st.subheader('Summarize URL')
 
 # Get the Groq Api Key and the URL to be summarized
@@ -36,15 +36,10 @@ if st.button('Summarize the content'):
     else:
         try:
             with st.spinner('Summarizing'):
-                # Load the content of the url
-                if "youtube.com" in generic_url:
-                    loader = YoutubeLoader.from_youtube_url(generic_url, add_video_info = True)
-                else:
-                    loader = UnstructuredURLLoader(urls = [generic_url],
+                loader = UnstructuredURLLoader(urls = [generic_url],
                                                    ssl_verify = True,
                                                    headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_5_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"})
                 docs = loader.load()
-                st.write(docs)
                 # Split the text into chunks
                 splits = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap = 200).split_documents(docs)
                 # Chain for summarizing
