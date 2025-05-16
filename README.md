@@ -29,7 +29,7 @@ A collection of plug-and-play generative AI mini-projects, including a SQL chatb
 - Output: Collated answer after web + document retrieval
 - Technologies: LangChain Agents, Multiple Toolkits
 
-### 4. ➕Text to Math Problem Solver
+### 4. ➕Text to Math Problem Solver - [Streamlit App](https://langchain-text-to-math.streamlit.app/)
 Converts natural language math questions into precise solutions by combining multiple specialized tools
 #### Features
 
