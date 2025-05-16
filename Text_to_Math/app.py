@@ -2,7 +2,6 @@
 import streamlit as st
 from dotenv import load_dotenv
 from langchain.callbacks import StreamlitCallbackHandler
-from langsmith.tracing import LangChainTracer  # ✅ LangSmith Tracing Import
 from langchain_groq import ChatGroq
 from langchain.chains import LLMMathChain, LLMChain
 from langchain.prompts import PromptTemplate
@@ -12,6 +11,9 @@ from langchain.agents.agent_types import AgentType
 import os
 import requests
 from bs4 import BeautifulSoup
+from langchain.callbacks import LangSmithCallbackHandler
+handler = LangSmithCallbackHandler()
+
 
 # Optional: for local development
 load_dotenv()
@@ -103,12 +105,11 @@ if st.button('Solve the Question'):
             st.session_state.messages.append({'role': 'user', 'content': question})
             with st.chat_message('assistant'):
                 # ✅ Use LangSmith tracer and StreamlitCallbackHandler
-                tracer = LangChainTracer()
                 response = assistant_agent.invoke(
                     question,
                     callbacks=[
                         StreamlitCallbackHandler(st.container(), expand_new_thoughts=True),
-                        tracer
+                        handler
                     ]
                 )
                 st.session_state.messages.append({'role': 'assistant', 'content': response})
