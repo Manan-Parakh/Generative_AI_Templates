@@ -18,7 +18,7 @@ A collection of plug-and-play generative AI mini-projects, including a SQL chatb
 - Output: Bullet-point or paragraph summary
 - Technologies: LangChain, WebPageLoader, LLMs
 
-### 3. 🔍 Search_Engine
+### 3. 🔍 Search_Engine - [Streamlit App](https://basic-search-engine-with-tools.streamlit.app/)
 > Query a multi-tool generative agent that can access the web and knowledge sources.
 
 - Tools used:
