@@ -29,6 +29,20 @@ A collection of plug-and-play generative AI mini-projects, including a SQL chatb
 - Output: Collated answer after web + document retrieval
 - Technologies: LangChain Agents, Multiple Toolkits
 
+### 4. ➕Text to Math Problem Solver
+Converts natural language math questions into precise solutions by combining multiple specialized tools
+#### Features
+
+- **Formula Fetching:** Retrieves exact mathematical formulas directly from Wikipedia pages using REST API and HTML parsing for accurate reference.
+- **Math Computation:** Performs precise numeric calculations on user-provided mathematical expressions using a dedicated LLMMathChain.
+- **Logical Reasoning:** Provides detailed stepwise reasoning and explanations for complex math word problems via a custom prompt-driven LLM chain.
+- **Interactive Chat UI:** Powered by Streamlit, offering a conversational interface for users to input questions and receive clear, detailed solutions.
+
+#### Tools Integration
+
+- **Wikipedia Formula Tool:** Fetches LaTeX formulas enclosed in `<math>` tags from Wikipedia on demand.
+- **Calculator Tool:** Executes mathematical expressions for exact numeric results.
+- **Reasoning Tool:** Handles logical deductions and multi-step problem solving with stepwise explanations.
 ---
 
 ## 🧰 Tech Stack
@@ -41,7 +55,7 @@ A collection of plug-and-play generative AI mini-projects, including a SQL chatb
 - BeautifulSoup
 - SQLAlchemy
 - Wikipedia, Arxiv, DuckDuckGo APIs
-
+- Wikipedia REST API
 ---
 
 ## 📦 Installation
