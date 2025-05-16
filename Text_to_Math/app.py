@@ -18,7 +18,7 @@ from langsmith import Client
 st.set_page_config(page_title="Text to Math Problem Solver and Data Search Assistant", page_icon="🧮")
 st.title('Text to Math Problem Solver')
 
-os.environ["LANGCHAIN_API_KEY"] = st.secrets["LANGCHAIN_API_KEY"]
+os.environ["LANGSMITH_API_KEY"] = st.secrets["LANGSMITH_API_KEY"]
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
 os.environ["LANGCHAIN_ENDPOINT"] = "https://api.smith.langchain.com"
 os.environ["LANGCHAIN_PROJECT"] = "Text_to_Math"
