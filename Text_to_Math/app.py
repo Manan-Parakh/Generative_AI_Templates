@@ -18,9 +18,11 @@ import os
 st.set_page_config(page_title="Text to Math Problem Solver and Data Search Assistant", page_icon="🧮")
 st.title('Text to Math Problem Solver')
 
-tracing_api = st.secrets["LANGSMITH_API_KEY_TEXT_TO_MATH"]
-client = Client(api_key=tracing_api)
-st.sidebar.text_area(tracing_api)
+#Setup Tracing
+os.environ["LANGCHAIN_API_KEY"] = st.secrets["LANGSMITH_API_KEY_TEXT_TO_MATH"]
+os.environ["LANGCHAIN_TRACING_V2"] = "true"
+os.environ["LANGCHAIN_ENDPOINT"] = "https://api.smith.langchain.com"
+client = Client()
 
 # setup the llm
 groq_api_key = st.sidebar.text_input('Groq API Key', type='password')
