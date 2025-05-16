@@ -15,6 +15,7 @@ from langsmith import Client
 import os
 
 client = Client(api_key = os.getenv("LANGSMITH_API_KEY_TEXT_TO_MATH"))
+st.write(os.getenv("LANGSMITH_API_KEY_TEXT_TO_MATH"))
 # Setup the streamlit app
 st.set_page_config(page_title="Text to Math Problem Solver and Data Search Assistant", page_icon="🧮")
 st.title('Text to Math Problem Solver')
