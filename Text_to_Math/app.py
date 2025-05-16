@@ -25,7 +25,7 @@ os.environ["LANGCHAIN_PROJECT"] = "Text_to_Math"
 
 # ✅ Initialize LangSmith Client (optional, only if you're using it explicitly)
 client = Client()
-st.sidebar.write("LANGCHAIN_API_KEY")
+st.sidebar.write(st.secrets["LANGSMITH_API_KEY"])
 # setup the llm
 groq_api_key = st.sidebar.text_input('Groq API Key', type='password')
 if not groq_api_key:
