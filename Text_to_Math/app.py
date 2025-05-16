@@ -19,7 +19,7 @@ st.set_page_config(page_title="Text to Math Problem Solver and Data Search Assis
 st.title('Text to Math Problem Solver')
 
 tracing_api = st.secrets["LANGSMITH_API_KEY_TEXT_TO_MATH"]
-client = Client(api_key = tracing_api)
+client = Client(api_key=tracing_api)
 #st.sidebar.text_area(tracing_api)
 
 # setup the llm
