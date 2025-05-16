@@ -13,7 +13,7 @@ from langchain.agents import Tool, initialize_agent
 from langchain.agents.agent_types import AgentType
 from langsmith import Client
 import os
-load_dotenv()
+
 client = Client(api_key = os.getenv("LANGSMITH_API_KEY_TEXT_TO_MATH"))
 # Setup the streamlit app
 st.set_page_config(page_title="Text to Math Problem Solver and Data Search Assistant", page_icon="🧮")
