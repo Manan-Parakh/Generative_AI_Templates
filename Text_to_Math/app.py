@@ -13,7 +13,7 @@ from langchain.agents import Tool, initialize_agent
 from langchain.agents.agent_types import AgentType
 import streamlit as st
 import os
-load_dotenv()
+#load_dotenv()
 
 st.set_page_config(page_title="Text to Math Problem Solver and Data Search Assistant", page_icon="🧮")
 st.title('Text to Math Problem Solver')
