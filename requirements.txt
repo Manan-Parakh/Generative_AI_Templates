@@ -30,3 +30,4 @@ sse_starlette
 validators
 youtube_transcript_api
 numexpr
+langsmith
