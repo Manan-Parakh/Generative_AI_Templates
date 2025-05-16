@@ -31,4 +31,3 @@ validators
 youtube_transcript_api
 numexpr
 langsmith
-langsmith.tracing
