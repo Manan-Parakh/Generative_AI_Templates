@@ -13,7 +13,10 @@ from langchain.agents import Tool, initialize_agent
 from langchain.agents.agent_types import AgentType
 import streamlit as st
 import os
-#load_dotenv()
+from langsmith.tracing import LangChainTracer
+tracer = LangChainTracer()
+
+load_dotenv()
 
 st.set_page_config(page_title="Text to Math Problem Solver and Data Search Assistant", page_icon="🧮")
 st.title('Text to Math Problem Solver')
@@ -111,7 +114,7 @@ if st.button('Solve the Question'):
             st.session_state.messages.append({'role':'user','content':question})
             with st.chat_message('assistant'):
                 # Fetch the output of the question
-                response = assistant_agent.invoke(question, callbacks= [StreamlitCallbackHandler(st.container(), expand_new_thoughts=True)])
+                response = assistant_agent.invoke(question, callbacks= [tracer, StreamlitCallbackHandler(st.container(), expand_new_thoughts=True)])
                 # print the response and als add it to the session history
                 st.session_state.messages.append({'role':'assistant','content':response})
                 st.write(response)
