@@ -19,9 +19,9 @@ st.set_page_config(page_title="Text to Math Problem Solver and Data Search Assis
 st.title('Text to Math Problem Solver')
 
 os.environ["LANGSMITH_API_KEY"] = st.secrets["LANGSMITH_API_KEY"]
-os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_ENDPOINT"] = "https://api.smith.langchain.com"
-os.environ["LANGCHAIN_PROJECT"] = "Text_to_Math"
+os.environ["LANGSMITH_TRACING"] = "true"
+os.environ["LANGSMITH_ENDPOINT"] = "https://api.smith.langchain.com"
+os.environ["LANGSMITH_PROJECT"] = "Text_to_Math"
 
 # ✅ Initialize LangSmith Client (optional, only if you're using it explicitly)
 client = Client()
