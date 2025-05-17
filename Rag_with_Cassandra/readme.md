@@ -3,7 +3,7 @@
 This is a Streamlit-based application that allows you to **upload PDF documents** and chat with them using **Retrieval-Augmented Generation (RAG)** powered by **OpenAI** and a **Cassandra-based vector store (Astra DB)**.
 
 ---
-
+[Streamlit App](https://rag-chatbot-pdf-cassandra.streamlit.app/)
 ## 📌 Features
 
 * 📥 Upload multiple PDF documents
