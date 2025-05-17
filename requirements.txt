@@ -31,3 +31,7 @@ validators
 youtube_transcript_api
 numexpr
 langsmith
+cassio
+tiktoken
+datasets
+PyPDF2
