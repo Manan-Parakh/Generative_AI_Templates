@@ -70,6 +70,12 @@ On the **sidebar**:
 
 ---
 
+## Astra DB Setup
+
+Get your **Astra DB Application Token** and **Database ID** from your [Datastax Astra dashboard](https://www.datastax.com/astra) under your organization’s API tokens and database details respectively. Use these credentials along with your chosen table name in the app configuration.
+
+---
+
 ## 📝 Usage
 
 1. Upload one or more PDFs using the “Upload Documents” section
