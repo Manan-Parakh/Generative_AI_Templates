@@ -14,13 +14,13 @@ from langchain.memory import ChatMessageHistory
 # Setup the page
 st.set_page_config(page_title="Conversational RAG with PDF Upload & Cassandra Vector Store", page_icon="🤖")
 st.title('🤖 Conversational RAG with PDF Upload & Cassandra Vector Store')
-st.sidebar.header('Please Enter the Keys')
+st.sidebar.header('Please Enter:')
 
 # Sidebar inputs
-openai_api_key = st.sidebar.text_input('Enter your OpenAI API Key', type='password')
-astradb_application_token = st.sidebar.text_input('Enter your ASTRA_DB_APPLICATION_TOKEN', type='password')
-astradb_id = st.sidebar.text_input('Enter your ASTRA_DB_ID', type='password')
-table_name = st.sidebar.text_input('Enter a Table Name to store the data')
+openai_api_key = st.sidebar.text_input('OpenAI API Key', type='password')
+astradb_application_token = st.sidebar.text_input('ASTRA_DB_APPLICATION_TOKEN', type='password')
+astradb_id = st.sidebar.text_input('ASTRA_DB_ID', type='password')
+table_name = st.sidebar.text_input('Table Name to store the data')
 # Initialize LLM, embeddings, and Cassandra vector store
 @st.cache_resource
 def llm_embedding_and_database(openai_api_key, astradb_application_token, astradb_id, table_name):
