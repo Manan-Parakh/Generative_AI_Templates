@@ -35,3 +35,4 @@ cassio
 tiktoken
 datasets
 PyPDF2
+gradio
