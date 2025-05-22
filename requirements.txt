@@ -36,3 +36,6 @@ tiktoken
 datasets
 PyPDF2
 gradio
+boto3
+awscli
+langchain-aws
